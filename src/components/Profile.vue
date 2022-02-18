@@ -1,4 +1,5 @@
 <template>
+  <side-bar></side-bar>
   <div class="container">
     <header class="jumbotron">
       <h3>
@@ -25,8 +26,13 @@
 </template>
 
 <script>
+import SideBar from './SideBar.vue';
+
 export default {
   name: 'Profile',
+  components: {
+    SideBar
+  },
   computed: {
     currentUser() {
       return this.$store.state.auth.user;
